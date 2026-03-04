@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="level-title" class="blink-text">Press Any Key or Tap Here to Start</h1>  
+  
+  <div class="ui-controls">
+      <button id="reset-btn" class="retro-btn">Reset Score</button>
+      <button id="instructions-btn" class="retro-btn">How to Play</button>
+      <button id="fullscreen-btn" class="retro-btn">Fullscreen</button>
+      <button id="theme-btn" class="retro-btn">Themes</button>
+      <button id="mute-btn" class="retro-btn">🔊 Sound: ON</button>
+  </div>
+
+  <div id="instructions-modal" class="modal">
+    <div class="modal-content">
+      <h2>How to Play</h2>
+      <p>1. Watch the pattern of flashing colors.</p>
+      <p>2. Repeat the sequence exactly.</p>
+      <p>3. The sequence gets longer and faster every level!</p>
+      <button id="close-modal-btn" class="retro-btn">Got it!</button>
+    </div>
+  </div>
+
+  <div id="theme-modal" class="modal">
+    <div class="modal-content">
+      <h2>Select Theme</h2>
+      <button id="theme-classic" class="retro-btn">Classic</button><br>
+      <button id="theme-neon" class="retro-btn" disabled>Neon (Unlock at Lv 5)</button><br>
+      <button id="theme-minimal" class="retro-btn" disabled>Minimal (Unlock at Lv 10)</button><br><br>
+      <button id="close-theme-btn" class="retro-btn" style="background-color: red; color: white;">Close</button>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="row">
+      <div role="button" id="green" class="btn green"><span class="key-hint">Q</span></div>
+      <div role="button" id="red" class="btn red"><span class="key-hint">W</span></div>
+    </div>
+    <div class="row">
+      <div role="button" id="yellow" class="btn yellow"><span class="key-hint">A</span></div>
+      <div role="button" id="blue" class="btn blue"><span class="key-hint">S</span></div>
+    </div>
+  </div>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+</body>
+
+</html>
